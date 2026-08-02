@@ -1,7 +1,50 @@
-"use strict";var s=function(i,r){return function(){try{return r||i((r={exports:{}}).exports,r),r.exports}catch(e){throw (r=0, e)}};};var m=s(function(B,l){
-var f=require('@stdlib/math-base-assert-is-nonnegative-integer/dist'),v=require('@stdlib/math-base-assert-is-nan/dist'),c=require('@stdlib/math-base-special-max/dist'),F=require('@stdlib/math-base-special-min/dist'),h=require('@stdlib/stats-base-dists-hypergeometric-cdf/dist'),x=require('@stdlib/constants-float64-pinf/dist');function k(i,r,e,a){var t,u;if(v(i)||v(r)||v(e)||v(a)||!f(r)||!f(e)||!f(a)||r===x||e===x||e>r||a>r||i<0||i>1)return NaN;if(i===0)return c(0,a+e-r);if(i===1)return F(a,e);for(u=c(0,a+e-r);t=h(u,r,e,a),!(t>i);)u+=1;return u}l.exports=k
-});var I=s(function(C,y){
-var o=require('@stdlib/math-base-assert-is-nonnegative-integer/dist'),q=require('@stdlib/math-base-assert-is-nan/dist'),w=require('@stdlib/utils-constant-function/dist'),b=require('@stdlib/math-base-special-max/dist'),P=require('@stdlib/math-base-special-min/dist'),O=require('@stdlib/stats-base-dists-hypergeometric-cdf/dist'),g=require('@stdlib/constants-float64-pinf/dist');function R(i,r,e){if(q(i)||q(r)||q(e)||!o(i)||!o(r)||!o(e)||i===g||r===g||r>i||e>i)return w(NaN);return a;function a(t){var u,n;if(q(t)||t<0||t>1)return NaN;if(t===0)return b(0,e+r-i);if(t===1)return P(e,r);for(n=b(0,e+r-i);u=O(n,i,r,e),!(u>t);)n+=1;return n}}y.exports=R
-});var j=require('@stdlib/utils-define-nonenumerable-read-only-property/dist'),d=m(),z=I();j(d,"factory",z);module.exports=d;
 /** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
+
+'use strict';
+
+/**
+* Hypergeometric distribution quantile function.
+*
+* @module @stdlib/stats-base-dists-hypergeometric-quantile
+*
+* @example
+* var quantile = require( '@stdlib/stats-base-dists-hypergeometric-quantile' );
+*
+* var y = quantile( 0.4, 40, 20, 10 );
+* // returns 5
+*
+* y = quantile( 0.8, 60, 40, 20 );
+* // returns 15
+*
+* y = quantile( 0.5, 100, 10, 10 );
+* // returns 1
+*
+* y = quantile( 0.0, 100, 40, 20 );
+* // returns 0
+*
+* y = quantile( 1.0, 100, 40, 20 );
+* // returns 20
+*
+* var myquantile = quantile.factory( 100, 20, 10 );
+* y = myquantile( 0.2 );
+* // returns 1
+*
+* y = myquantile( 0.9 );
+* // returns 4
+*/
+
+// MODULES //
+
+var setReadOnly = require( '@stdlib/utils-define-nonenumerable-read-only-property/dist' );
+var main = require( './main.js' );
+var factory = require( './factory.js' );
+
+
+// MAIN //
+
+setReadOnly( main, 'factory', factory );
+
+
+// EXPORTS //
+
+module.exports = main;
