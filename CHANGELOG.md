@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-02)
+## Unreleased (2026-09-21)
 
 <section class="features">
 
@@ -15,6 +15,16 @@
 </section>
 
 <!-- /.features -->
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`810e5f5`](https://github.com/stdlib-js/stdlib/commit/810e5f59051741b68f46e640f7db56103283f067) - avoid integer overflow [(#14972)](https://github.com/stdlib-js/stdlib/pull/14972)
+
+</section>
+
+<!-- /.bug-fixes -->
 
 <section class="issues">
 
@@ -34,6 +44,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`810e5f5`](https://github.com/stdlib-js/stdlib/commit/810e5f59051741b68f46e640f7db56103283f067) - **fix:** avoid integer overflow [(#14972)](https://github.com/stdlib-js/stdlib/pull/14972) _(by Philipp Burckhardt)_
 -   [`a7ff788`](https://github.com/stdlib-js/stdlib/commit/a7ff7889215794799bce26b969a8a10e661a3427) - **feat:** add C implementation for `stats/base/dists/hypergeometric/quantile` [(#10904)](https://github.com/stdlib-js/stdlib/pull/10904) _(by Vishal.., stdlib-bot, Philipp Burckhardt)_
 -   [`77a562a`](https://github.com/stdlib-js/stdlib/commit/77a562af730f04df4f25308c21fca66cb994b65a) - **bench:** refactor to use string interpolation in `stats/base/dists/hypergeometric` [(#10390)](https://github.com/stdlib-js/stdlib/pull/10390) _(by Vishal Gaikwad)_
 -   [`7add020`](https://github.com/stdlib-js/stdlib/commit/7add0201c13e56a0381926ccfd4073c84eaf2ed4) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
